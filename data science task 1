@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+genders = ['Male', 'Female', 'Male', 'Female', 'Male', 'Female', 'Female', 'Male', 'Male', 'Female']
+gender_counts = {}
+for gender in genders:
+    if gender in gender_counts:
+        gender_counts[gender] += 1
+    else:
+        gender_counts[gender] = 1
+plt.bar(gender_counts.keys(), gender_counts.values(), color=['blue', 'pink'])
+plt.xlabel('Gender')
+plt.ylabel('Count')
+plt.title('Gender Distribution')
+plt.show()
+  
